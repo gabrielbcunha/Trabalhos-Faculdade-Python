@@ -25,7 +25,7 @@ class TabelaHash:
 
     def imprimirTabelaHash(self):
         for i, head in enumerate(self.tabela):
-            print(f"Posição {i}:", end=" ")
+            print(f"{i}:", end=" ")
             atual = head
             while atual:
                 print(f"{atual.sigla}", end=" -> ")
