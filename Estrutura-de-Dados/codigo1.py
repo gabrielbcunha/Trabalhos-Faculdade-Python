@@ -1,4 +1,3 @@
-#Criação dos elementos da lista
 class ElementoDaListaSimples:
     def __init__(self, numero, cor):
         self.numero = numero
@@ -8,7 +7,6 @@ class ElementoDaListaSimples:
     def __repr__(self):
         return f"{self.numero}, {self.cor})"
 
-#Criação da Lista Encadeada Simples
 class ListaEncadeadaSimples:
     def __init__(self, nodos=None):
         self.head = None
@@ -28,12 +26,11 @@ class ListaEncadeadaSimples:
         nodo = self.head
         nodos = []
         while nodo is not None:
-            nodos.append(str(nodo))  # usa __repr__ do nodo
+            nodos.append(str(nodo))
             nodo = nodo.proximo
         nodos.append("None")
         return " -> ".join(nodos)
 
-    #Fução inserir sem prioridade (utilizada pelos cartões V)
     def inserirSemPrioridade(self, nodo):
         if self.head is None:
             self.head = nodo
@@ -46,7 +43,6 @@ class ListaEncadeadaSimples:
         nodo_atual.proximo = nodo
         return
 
-    #Fução inserir com prioridade (utilizada pelos cartões A)
     def inserirComPrioridade(self, nodo):
         if self.head is None:
             self.head = nodo
@@ -63,19 +59,15 @@ class ListaEncadeadaSimples:
         nodo.proximo = nodo_atual.proximo
         nodo_atual.proximo = nodo
 
-    #Função inserir que pede para o usuário qual cartão será cadastrado e evoca a função correspondente
     def inserir(self):
-
         cor = input("Informe a cor do cartão (A/V)").strip().upper()
 
         if cor != 'A' and cor != 'V':
             print("Por favor insira uma opção válida")
             return
-        #Aumenta o contador da cor A
         if cor == 'A':
             numero = self.contador_A
             self.contador_A += 1
-        #Aumenta o contador da cor V
         if cor == 'V':
             numero = self.contador_V
             self.contador_V += 1
@@ -89,7 +81,6 @@ class ListaEncadeadaSimples:
         elif cor == 'V':
             self.inserirSemPrioridade(nodo)
 
-    #Função para imprimir a lista
     def imprimirListaEspera(self):
         if self.head is None:
             print("Lista de espera vazia")
@@ -102,7 +93,7 @@ class ListaEncadeadaSimples:
             nodos.append(f"[{nodo.cor},{nodo.numero}]")
             nodo = nodo.proximo
         print("Lista -> " + " ".join(nodos))
-    #Função para atender o primeiro da lista e exclui-lo da lista
+
     def atenderPaciente(self):
         if self.head is None:
             print("Lista de espera vazia")
@@ -112,7 +103,6 @@ class ListaEncadeadaSimples:
         self.head = paciente_atendido.proximo
         print(f"Atendendo o paciente cartão cor {paciente_atendido.cor} e número {paciente_atendido.numero}")
 
-#Menu com as opções para o Usuario
 def menu():
     fila = ListaEncadeadaSimples()
     while True:
@@ -130,9 +120,8 @@ def menu():
         elif escolha == 3:
             fila.atenderPaciente()
         elif escolha == 4:
-            print("Obrigado por utilizar o sistema. Encerrando...")
+            print("Encerrando")
             break
         else:
             print("Por favor insira uma opção válida")
-#Iniciando menu
 menu()
