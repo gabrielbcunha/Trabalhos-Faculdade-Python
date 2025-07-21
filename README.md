@@ -3,7 +3,7 @@ Repositório criado para armazenar os códigos desenvolvidos para trabalhos inst
 
 # 📝Projetos Desenvolvidos
 
-## [🗂 Estrutura de Dados](#Estrutura-de-Dados)
+## [🗂 Estrutura de Dados](https://github.com/gabrielbcunha/Trabalhos-Faculdade-Python/tree/main/Estrutura-de-Dados)
 
 
 - Questão 1 - Lista Encadeada<br>
