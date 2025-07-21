@@ -3,7 +3,8 @@ Repositório criado para armazenar os códigos desenvolvidos para trabalhos inst
 
 # 📝Projetos Desenvolvidos
 
-## 🗂Estrutura de Dados
+## [🗂 Estrutura de Dados](#estrutura-de-dados)
+
 
 - Questão 1 - Lista Encadeada<br>
 Sistema de triagem hospitalar com classificação de prioridade com base em uma avaliação prévia do estado do paciente, sendo classificado em (V) Verde - sem prioridade e (A) Amarelo - com prioridade.<br>
